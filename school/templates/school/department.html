@@ -1,0 +1,42 @@
+
+<html>
+<head>
+
+    <title>Department</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'school/style.css' %}">
+</head>
+<body>
+    <h3>Department Infromation</h3>
+<div class="container">
+<form action="POST">
+        <label>Department Name :</label>
+        <input id="department_name" type="submit">
+        <ul>
+                {% for departmentData in departmentData %}
+                    <h1>{{ departmentData.name }}</h1>
+                {% endfor %}
+        </ul>
+</form>
+</body>
+
+<script>
+    function myDept() {
+        var department = document.getElementById("department_name").value;
+
+        $.ajax({
+             url:'/school/school/',
+             type:'POST',
+             resp:{'department': department },
+             success:function(resp){
+                 console.log(resp);
+                 alert("shf");
+             }
+         });
+    }
+
+</script>
+
+
+
+</html>

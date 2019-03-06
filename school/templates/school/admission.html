@@ -1,0 +1,30 @@
+<html>
+        <head>
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'school/style.css' %}">
+            <title>Admission Details</title>
+        </head>
+        <body>
+        <div class="container" style="text-align:center">
+                <h3>Admission Details</h3>
+                <!-- <label>Student Name :</label><input id="stud_name" name="=teach_name" /><br />
+                <br /> -->
+                <label>First Name :</label><label style="color:red">*</label>&nbsp;<input id="teach_name" name="teach_name" required/><br />
+                <br /> 
+                 <label>Last Name :</label><label style="color:red">*</label>&nbsp;<input id="teach_name" name="teach_name" required/><br />
+                <br />
+                <label>Username :</label><label style="color:red">*</label>&nbsp;{{user.get_username}}<input id="teach_name" name="teach_name" required /><br />
+                <br />
+                <label>Email Id : </label><input id="subj_name" name="subj_name"/><br />
+                <br />
+                <label>Password  : </label><label style="color:red">*</label>&nbsp;<input id="clss_name" name="clss_name required"/><br />
+                <br /> 
+                <label>Password Comfirmation  : </label><label style="color:red">*</label>&nbsp;<input id="clss_name" name="clss_name" required/><br />
+                <br />  
+                <button type="submit" name="submit" value="submit">Submit</button>
+                <!-- <div style="float:top-right">
+                <label>Today Date : </label><input id="att_sts" name="att_sts"/><br />
+            </div> -->
+    </div>
+        </body>
+</html>
